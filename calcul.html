@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+    <head>
+    
+        <meta charset="utf-8">
+        <title>Calculatrice de prêts bancaires</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    
+        <style>
+        
+            #chargement,#resultats {display: none;}
+            
+        </style>
+    
+    </head>
+    
+<body class="bg-dark">
+    
+    <main class="container">
+    
+        <div class="row">
+        
+            <div class="col-md-6 mx-auto">
+            
+                <div class="card card-body text-center mt-5">
+                
+                    <h2 class="pb-3">Calculatrice de prêts bancaires</h2>
+                    
+                    <form id="formulaire">
+                    
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">€</span>
+                                <input type="number" id="montant" placeholder="Montant du prêt" class="form-control">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">%</span>
+                                <input type="number" id="interets" placeholder="Intérêts" class="form-control">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="number" id="annees" placeholder="Nombre d'années" class="form-control">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <input type="submit" value="Calculer" class="btn btn-info">
+                        </div>
+                        
+                    </form>
+                    
+                    <div id="chargement">
+                        <img src="loading.gif" alt="" width="128px" height="128px">
+                    </div>
+                    
+                    <div id="resultats">
+                        
+                        <h5 class="pt-2">Résultats</h5>
+                    
+                        <div class="form-group">
+                    
+                            <div class="input-group">
+                                <span class="input-group-text">Paiement mensuel</span>
+                                <input type="number" id="paiement-mensuel" class="form-control" disabled>
+                            </div>
+                        
+                        </div>
+                    
+                        <div class="form-group">
+
+                            <div class="input-group">
+                                <span class="input-group-text">Montant total</span>
+                                <input type="number" id="montant-total" class="form-control" disabled>
+                            </div>
+
+                        </div>
+                    
+                        <div class="form-group">
+
+                            <div class="input-group">
+                                <span class="input-group-text">Montant des intérêts</span>
+                                <input type="number" id="montant-interet" class="form-control" disabled>
+                            </div>
+                        
+                        </div>
+                        
+                    </div>
+                
+                </div>
+            
+            </div>
+        
+        </div>
+    
+    </main>
+    
+<script src="calcul.js"></script>
+    
+</body>
+
+</html>
